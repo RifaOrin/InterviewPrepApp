@@ -24,7 +24,7 @@ class Post(models.Model):
                                     (QUESTIONS, 'questions'),
                                     (ENTERTAINMENT, 'entertainment'),
                                     (EXPERIENCES, 'experiences')
-                                ], default=ENTERTAINMENT)
+                                ], default=QUESTIONS)
     tag = models.ManyToManyField(
         Tag, related_name='post', blank=True
     )
@@ -105,4 +105,4 @@ class PostReport(models.Model) :
                                     (Hate_Speech, 'hate'),
                                     (Spam, 'spam'),
                                     (Irrelevant, 'irrelevant')
-                                ], default=Spam)
+                                ], default=Hate_Speech)
